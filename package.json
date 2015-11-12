@@ -1,0 +1,30 @@
+{
+  "name": "openpeaks-articles-generator",
+  "version": "0.0.1",
+  "description": "Openpeaks articles generator",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha",
+    "start": "node ./lib/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openpeaks/openpeaks-articles-generator.git"
+  },
+  "keywords": [
+    "articles",
+    "openpeaks",
+    "generator"
+  ],
+  "author": "Dumitru Cantea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/openpeaks/openpeaks-articles-generator/issues"
+  },
+  "homepage": "https://github.com/openpeaks/openpeaks-articles-generator",
+  "dependencies": {
+    "bluebird": "^3.0.5",
+    "dotenv": "^1.2.0",
+    "lodash": "^3.10.1"
+  }
+}
