@@ -9,6 +9,9 @@
   "bin": {
     "articles": "./bin/articles.js"
   },
+  "engines": [
+    "node >=4.0.0"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/openpeaks/openpeaks-articles.git"
