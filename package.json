@@ -7,6 +7,10 @@
     "test": "./node_modules/mocha/bin/mocha",
     "start": "node ./lib/app.js"
   },
+  "main": "bin/articles.js",
+  "bin": {
+    "articles": "./bin/articles.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/openpeaks/openpeaks-articles.git"
@@ -23,9 +27,11 @@
   "homepage": "https://github.com/openpeaks/openpeaks-articles",
   "dependencies": {
     "bluebird": "^3.0.5",
+    "commander": "^2.9.0",
     "dotenv": "^1.2.0",
     "html-minifier": "^1.0.0",
     "js-yaml": "^3.4.3",
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "ms": "^0.7.1"
   }
 }
