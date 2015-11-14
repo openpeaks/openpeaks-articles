@@ -2,10 +2,8 @@
   "name": "openpeaks-articles",
   "version": "0.0.1",
   "description": "Openpeaks articles",
-  "main": "./lib/index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha",
-    "start": "node ./lib/app.js"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "main": "bin/articles.js",
   "bin": {
@@ -30,8 +28,12 @@
     "commander": "^2.9.0",
     "dotenv": "^1.2.0",
     "html-minifier": "^1.0.0",
+    "joi": "^7.0.0",
     "js-yaml": "^3.4.3",
     "lodash": "^3.10.1",
-    "ms": "^0.7.1"
+    "marked": "^0.3.5",
+    "mkdirp": "^0.5.1",
+    "ms": "^0.7.1",
+    "sanitizer": "^0.1.2"
   }
 }

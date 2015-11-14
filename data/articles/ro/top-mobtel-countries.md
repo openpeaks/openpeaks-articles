@@ -1,6 +1,7 @@
 ---
 model: top_mobtel_per_100
 title: Țările cu cele mai multe abonamente de telefonie mobilă la 100 locuitori
+slug: Țările cu cele mai multe abonamente de telefonie mobilă la 100 locuitori
 ---
 
 <h2>Țările cu cele mai multe abonamente de telefonie mobilă pe cap de locuitor</h2>
@@ -23,7 +24,7 @@ title: Țările cu cele mai multe abonamente de telefonie mobilă la 100 locuito
 </tbody>
 </table>
 
-<p>Cele mai putine:</p>
+<h3>Țările cu cele mai puține abonamente de telefonie mobilă pe cap de locuitor sunt:</h3>
 
 <table class="">
 <thead><tr><th>Tara</th><th>Value</th></tr></thead>
