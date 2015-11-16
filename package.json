@@ -31,6 +31,7 @@
     "commander": "^2.9.0",
     "dotenv": "^1.2.0",
     "html-minifier": "^1.0.0",
+    "intl": "^1.0.1",
     "joi": "^7.0.0",
     "js-yaml": "^3.4.3",
     "lodash": "^3.10.1",
