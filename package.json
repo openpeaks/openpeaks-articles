@@ -5,9 +5,9 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
   },
-  "main": "bin/articles.js",
+  "main": "bin/openpeaks.js",
   "bin": {
-    "articles": "./bin/articles.js"
+    "openpeaks": "./bin/openpeaks.js"
   },
   "engines": [
     "node >=4.0.0"
