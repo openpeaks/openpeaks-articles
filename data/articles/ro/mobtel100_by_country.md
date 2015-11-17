@@ -5,6 +5,7 @@ headline: "În <%= country.name.ro.official %> sunt <%= values[0].value.toLocale
 target: country
 type: value
 categories: [development, tech]
+imageId: 2015/going-mobile.jpg
 ---
 
 <%
@@ -44,7 +45,7 @@ return name.ro.common || name.ro.official;
 
 Evoluția numărului de abonamente de telefonie mobile și celulare la 100 locuitori în <%= getName(country.name) %>.
 
-În anul <%= values[0].range %> în <%= country.name.ro.official %> erau **<%= values[0].value.toLocaleString(lang, {maximumFractionDigits:2}) %>** abonamente de telefonie mobilă la 100 locuitori, iar în <%= values[values.length-1].range %> erau doar **<%= (values[values.length-1].value*10).toLocaleString(lang, {maximumFractionDigits:1}) %>** abonamente la **1,000** de oameni.
+În anul <%= values[0].range %> în [<%= country.name.ro.official %>](/<%= lang %>/country/<%= country.cca2.toLowerCase() %>) erau **<%= values[0].value.toLocaleString(lang, {maximumFractionDigits:2}) %>** abonamente de telefonie mobilă la 100 locuitori, iar în <%= values[values.length-1].range %> erau doar **<%= (values[values.length-1].value*10).toLocaleString(lang, {maximumFractionDigits:1}) %>** abonamente la **1,000** de oameni.
 
 ### Grafic
 
@@ -59,7 +60,7 @@ Evoluția numărului de abonamente de telefonie mobile și celulare la 100 locui
 
 <table class="article-table cell-no">
 <thead>
-  <tr><th>Anul</th><th>Valoare</th></tr>
+  <tr><th>Anul</th><th>Abonamente</th></tr>
 </thead>
 <tbody>
   <% values.forEach(function(item, index){ %>
@@ -74,14 +75,12 @@ Evoluția numărului de abonamente de telefonie mobile și celulare la 100 locui
 <script>
 (function(){
   var charts = window.articleCharts = [];
-  var labels = <%= JSON.stringify(util._.pluck(rValues, 'range')) %>;
-  var series = <%= JSON.stringify(util._.pluck(rValues, 'value').map(function(value){return Number(value.toFixed(2));})) %>;
   charts.push({
     selector: '#mobdel100-chart-<%= country.cca2 %>',
     type: 'line',
     data: {
-      labels: labels,
-      series: [series]
+      labels: <%= JSON.stringify(util._.pluck(rValues, 'range')) %>,
+      series: [<%= JSON.stringify(util._.pluck(rValues, 'value').map(function(value){return Number(value.toFixed(2));})) %>]
     }
   });
 })();

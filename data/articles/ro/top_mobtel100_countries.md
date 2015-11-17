@@ -4,8 +4,9 @@ slug: Țările cu cele mai multe abonamente de telefonie mobilă la 100 locuitor
 type: top
 categories: [development, tech]
 headline: Top țări cu cele mai multe abonamente de telefonie mobilă pe cap de locuitor
-imageId: 2015/a5520551e361a65a8ee0fc1b470015f.jpg
 ---
+
+<% var topCountry = topCountries[0].topic; %>
 
 <% function getName(name){
 return name.ro.common || name.ro.official;
@@ -13,15 +14,15 @@ return name.ro.common || name.ro.official;
 
 Top țări cu cele mai multe abonamente de telefonie mobilă pe cap de locuitor.
 
-Țara cu cele mai multe abonamente de telefonie mobilă pe cap de locuitor este <a href="/country/<%= topCountries[0].topic.cca2.toLowerCase() %>"><strong><%= getName(topCountries[0].topic.name) %></strong></a> cu <%= (topCountries[0].data.range/100).toLocaleString(lang,{maximumFractionDigits:2}) %> pe cap de locuitor.
+Țara cu cele mai multe abonamente de telefonie mobilă pe cap de locuitor este [**<%= getName(topCountry.name) %>**](/<%= lang %>/country/<%= topCountry.cca2.toLowerCase() %>) cu <%= (topCountries[0].data.range/100).toLocaleString(lang,{maximumFractionDigits:2}) %> abonamente pe cap de locuitor.
 
 <table class="article-table cell-no">
-<thead><tr><th>Nr.</th><th class="cell-txt">Tara</th><th>Value</th><th>Anul</th></tr></thead>
+<thead><tr><th>#</th><th class="cell-txt">Țara</th><th>Abonamete</th><th>Anul</th></tr></thead>
 <tbody>
 <% topCountries.forEach(function(item, index){ %>
 <tr>
 <th><%= index+1 %></th>
-<td class="cell-txt"><a href="/country/<%= item.topic.cca2.toLowerCase() %>"><%= getName(item.topic.name) %></a></td>
+<td class="cell-txt">[<%= getName(item.topic.name) %>](/<%= lang %>/country/<%= item.topic.cca2.toLowerCase() %>)</td>
 <td><%= item.data.range.toLocaleString(lang,{maximumFractionDigits:2}) %></td>
 <td><%= item.data.label %></td>
 </tr>
@@ -29,15 +30,15 @@ Top țări cu cele mai multe abonamente de telefonie mobilă pe cap de locuitor.
 </tbody>
 </table>
 
-### Țările cu cele mai puține abonamente de telefonie mobilă pe cap de locuitor sunt:
+Pe de altă parte, țările cu cele mai puține abonamente de telefonie mobilă la 100 locuitor sunt:
 
 <table class="article-table cell-no">
-<thead><tr><th>Nr.</th><th class="cell-txt">Tara</th><th>Value</th><th>Anul</th></tr></thead>
+<thead><tr><th>#</th><th class="cell-txt">Țara</th><th>Abonamete</th><th>Anul</th></tr></thead>
 <tbody>
 <% topCountries2.forEach(function(item, index){ %>
 <tr>
 <th><%= index+1 %></th>
-<td class="cell-txt"><%= getName(item.topic.name) %></td>
+<td class="cell-txt">[<%= getName(item.topic.name) %>](/<%= lang %>/country/<%= item.topic.cca2.toLowerCase() %>)</td>
 <td><%= item.data.range.toLocaleString(lang,{maximumFractionDigits:2}) %></td>
 <td><%= item.data.label %></td>
 </tr>
