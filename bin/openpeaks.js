@@ -54,4 +54,20 @@ program
 		return action(options);
 	});
 
+program
+	.command('media [action] [time]')
+	.description('Manage articles media')
+	.option('-a, --action action', 'Action', /^(publish|upload)$/)
+	.option('-t, --time time', 'Last changed time', /^\d+[\w ]*$/)
+	.action(function(action, time, opts) {
+		var options = {
+			action: action || opts.action,
+			time: time || opts.time
+		};
+		options = clearOptions(options);
+		console.log('options:', options);
+		var action = require('../lib/actions/media').start;
+		return action(options);
+	});
+
 program.parse(process.argv);
