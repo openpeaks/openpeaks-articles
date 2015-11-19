@@ -66,7 +66,7 @@ program
 		};
 		options = clearOptions(options);
 		console.log('options:', options);
-		var action = require('../lib/actions/media').start;
+		action = require('../lib/actions/media').start;
 		return action(options);
 	});
 
