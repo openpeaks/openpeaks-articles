@@ -2,7 +2,7 @@
 title: "<%= countryName %>: abonamente de telefonie mobilă la 100 locuitori"
 slug: "<%= country.cca2 %> abonamente de telefonie mobilă la 100 locuitori"
 headline: "În <%= country.name[lang].official %> sunt <%= values[0].value.toLocaleString(lang, {maximumFractionDigits:2}) %> abonamente de telefonie mobilă la 100 locuitori."
-target: "country:md"
+target: country
 type: value
 categories: [development, tech]
 imageId: 2015/going-mobile.jpg
@@ -10,7 +10,7 @@ imageId: 2015/going-mobile.jpg
 
 Evoluția numărului de abonamente de telefonie mobile și celulare la 100 locuitori în <%= countryName %>.
 
-În anul <%= values[0].range %> în [<%= country.name.ro.official %>](/<%= lang %>/country/<%= country.cca2.toLowerCase() %>) erau **<%= values[0].value.toLocaleString(lang, {maximumFractionDigits:2}) %>** abonamente de telefonie mobilă la 100 locuitori, iar în <%= values[values.length-1].range %> erau doar **<%= (values[values.length-1].value*10).toLocaleString(lang, {maximumFractionDigits:1}) %>** abonamente la **1,000** de oameni.
+În anul <%= values[0].range %> în [<%= country.name[lang].official %>](/<%= lang %>/country/<%= country.cca2.toLowerCase() %>) erau **<%= values[0].value.toLocaleString(lang, {maximumFractionDigits:2}) %>** abonamente de telefonie mobilă la 100 locuitori, iar în <%= values[values.length-1].range %> erau doar **<%= (values[values.length-1].value*10).toLocaleString(lang, {maximumFractionDigits:1}) %>** abonamente la **1,000** de oameni.
 
 ### Grafic
 
