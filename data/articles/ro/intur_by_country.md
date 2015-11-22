@@ -1,5 +1,5 @@
 ---
-title: "Evoluția numărului de turiști pentru <%= countryName %>"
+title: "Evoluția numărului de turiști în <%= countryName %>"
 slug: "<%= country.cca2 %> evoluția numărului de turiști"
 headline: "În <%= values[0].range %> <%= country.name[lang].official %> a fost vizitată de <%= values[0].value.toLocaleString(lang, {maximumFractionDigits:2}) %> turiști străini."
 target: country

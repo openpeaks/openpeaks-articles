@@ -38,8 +38,4 @@ In <%= decreaseYear %> the number of subscriptions decreased by **<%= decreasePe
 </tbody>
 </table>
 
-<script>
-(function(){
-  var charts = window.articleCharts = <%= JSON.stringify(charts) %>;
-})();
-</script>
+<script>(function(){window.articleCharts = <%= JSON.stringify(charts) %>;})();</script>

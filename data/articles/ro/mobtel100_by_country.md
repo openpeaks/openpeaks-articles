@@ -22,7 +22,7 @@ Evoluția numărului de abonamente de telefonie mobile și celulare la 100 locui
 În anul <%= decreaseYear %> a scăzut numărul de abonamente cu **<%= decreasePercent.toLocaleString(lang, {maximumFractionDigits:2}) %>**% față de anul <%= decreaseYear-1 %>.
 <% } %>
 
-### Table
+### Tabel
 
 <table class="article-table cell-no">
 <thead>
@@ -38,8 +38,4 @@ Evoluția numărului de abonamente de telefonie mobile și celulare la 100 locui
 </tbody>
 </table>
 
-<script>
-(function(){
-  var charts = window.articleCharts = <%= JSON.stringify(charts) %>;
-})();
-</script>
+<script>(function(){window.articleCharts = <%= JSON.stringify(charts) %>;})();</script>
